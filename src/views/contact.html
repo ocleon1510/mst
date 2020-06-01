@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+    <%- include('partials/head.html'); -%>
+    
+</head>
+<body><%- include('partials/navigation.html'); -%>
+    <div class="container p-3" style="max-width: 100rem;">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card animated flipInY">
+                    <div class="card-header bg-warning text-white text-center">
+                        <h2>Contacto</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="/send-email" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="nombre" class="form-control" placeholder="Nombre:">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="telefono" class="form-control" placeholder="Telefono:">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="correo" class="form-control" placeholder="E-mail:">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="mensaje" cols="20" rows="5" class="form-control" placeholder="Mensaje:"></textarea>
+                        </div>
+                            <button class="btn btn-dark btn-block" id="btnEnviar">Enviar Mensaje</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 animated fadeIn delay-3">
+                <div class="text-dark text-center"><img src="./img/ac.jpg" alt="Atencion al Cliente">
+                        <h4>Atención al Cliente.</h4>Contacta nuestro equipo de atención al cliente estamos disponibles 24/7,
+atendemos y elaboramos cotizaciones sin costos alguno y adaptados a las necesidades de nuestros clientes. <br><b>SOLICITA TU PRESUPUESTO</b>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body><%- include('partials/footer.html'); -%>
+</html>

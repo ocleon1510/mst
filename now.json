@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "name": "madooserviciostecnicos",
+    "builds": [
+        { "src": "./src/index.js", "use": "@now/node-server" },
+        { "src": "./src/publico", "use": "@now/static" }
+    ],
+    "routes": [
+        { "src": "/(.*)", "dest": "/src/index.js" }
+    ]
+}
